@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PostService } from '../post.service';
 import { Router } from '@angular/router';
 import { Post } from '../post.model';
@@ -12,7 +12,10 @@ import { Location } from '@angular/common';
   providers: [PostService]
 })
 export class PostListComponent implements OnInit {
+  @Output() editPostEmitter = new EventEmitter();
+
   posts: Post[];
+  postToEdit = null;
   filterCategory: string = "new";
 
   constructor(private route: ActivatedRoute, private router: Router, private postService: PostService, private location: Location) { }
@@ -26,5 +29,13 @@ export class PostListComponent implements OnInit {
 
   goToPostDetail(post){
     this.router.navigate(['post', post.id]);
+  }
+
+  goToEditPost(post){
+    this.postToEdit = post;
+    console.log(this.postToEdit);
+  }
+  editFinished(){
+    this.postToEdit = null;
   }
 }

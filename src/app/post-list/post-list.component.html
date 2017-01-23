@@ -1,5 +1,7 @@
 <h2>Post List!</h2>
 
-<div *ngFor="let post of posts | sort:filterCategory" (click)="goToPostDetail(post)">
-    <h3><em>{{post.title}}</em> by {{post.pictureUrl}}</h3>
+<div *ngFor="let post of posts | sort:filterCategory" >
+    <h3 (click)="goToPostDetail(post)"><em>{{post.title}}</em> by {{post.pictureUrl}}</h3>
+    <button (click)="goToEditPost(post)">Edit Post</button>
+    <app-edit-post [postToEdit]="postToEdit" (doneButtonClickedSender)="editFinished()"></app-edit-post>
 </div>

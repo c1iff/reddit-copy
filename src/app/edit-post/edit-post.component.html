@@ -1,3 +1,22 @@
-<p>
-  edit-post works!
-</p>
+<div *ngIf="postToEdit">
+  <div class="form-group">
+    <label>Title</label><br>
+    <input [(ngModel)]="postToEdit.title" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Picture URL</label><br>
+    <input [(ngModel)]="postToEdit.pictureUrl" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Source URL</label><br>
+    <input [(ngModel)]="postToEdit.sourceUrl" class="form-control">
+  </div>
+  <label>Category</label><br>
+  <select [(ngModel)]="postToEdit.category" class="form-control">
+     <option value="new" selected="selected">New</option>
+     <option value="hot">Hot</option>
+     <option value="controversial">Controversial</option>
+     <option value="rising">Rising</option>
+   </select><br>
+    <button class="btn btn-primary btn-inverse" (click)="editedPost()">Finished Editing</button>
+  </div>
