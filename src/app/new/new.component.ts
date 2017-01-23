@@ -12,7 +12,8 @@ import { Post } from '../post.model';
 })
 export class NewComponent implements OnInit {
   posts: Post[];
-  
+  filterCategory: string = "new";
+
   constructor(private router: Router, private postService: PostService) { }
 
   ngOnInit() {
