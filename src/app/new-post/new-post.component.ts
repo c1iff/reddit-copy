@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { PostService } from '../post.service';
 import { Router } from '@angular/router';
 import { Post } from '../post.model';
@@ -11,6 +11,7 @@ import { Post } from '../post.model';
 })
 export class NewPostComponent implements OnInit {
   @Input() showNewForm;
+  @Output() emitPostAdded = new EventEmitter();
 
   constructor(private router: Router, private postService: PostService) { }
 
@@ -22,6 +23,7 @@ export class NewPostComponent implements OnInit {
     var newPost = new Post(title, sourceUrl, currentDate.toLocaleDateString(), 0, pictureUrl, category );
     console.log(newPost)
     this.postService.addNewPost(newPost);
+    this.emitPostAdded.emit();
   }
 
 }

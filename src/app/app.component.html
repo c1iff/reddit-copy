@@ -3,7 +3,7 @@
     <a class="navbar-brand" href="#">Discussion Board</a>
     <ul class="nav navbar-nav navbar-right">
       <li><a routerLink="controversial">Controversial</a></li>
-      <li><a routerLink="hot" (click)="goToNew(posts)">Hot</a></li>
+      <li><a routerLink="hot">Hot</a></li>
       <li><a routerLink="rising">Rising</a></li>
       <li><a routerLink="">New</a></li>
     </ul>
@@ -16,5 +16,5 @@
 
   <router-outlet></router-outlet>
   <button class="btn btn-success"(click)="showForm()">Add New Post</button>
-  <app-new-post [showNewForm]="showNewForm"></app-new-post>
+  <app-new-post [showNewForm]="showNewForm" (emitPostAdded)="postAdded()"></app-new-post>
 </div>

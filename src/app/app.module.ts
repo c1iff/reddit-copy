@@ -5,8 +5,8 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { HotComponent } from './hot/hot.component';
 import { NewComponent } from './new/new.component';
+import { HotComponent } from './hot/hot.component';
 import { RisingComponent } from './rising/rising.component';
 import { ControversialComponent } from './controversial/controversial.component';
 import { SortPipe } from './sort.pipe';
@@ -15,8 +15,8 @@ import { NewPostComponent } from './new-post/new-post.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HotComponent,
     NewComponent,
+    HotComponent,
     RisingComponent,
     ControversialComponent,
     SortPipe,

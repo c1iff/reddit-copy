@@ -20,4 +20,8 @@ export class AppComponent {
     this.showNewForm = true;
   }
 
+  postAdded() {
+    this.showNewForm = false;
+  }
+
 }

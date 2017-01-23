@@ -1,8 +1,8 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NewComponent } from './new/new.component';
-import { ControversialComponent } from './controversial/controversial.component';
 import { HotComponent } from './hot/hot.component';
+import { ControversialComponent } from './controversial/controversial.component';
 import { RisingComponent } from './rising/rising.component';
 
 const appRoutes: Routes = [
