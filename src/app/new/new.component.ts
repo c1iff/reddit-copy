@@ -20,7 +20,7 @@ export class NewComponent implements OnInit {
     this.posts = this.postService.getPosts();
   }
 
-  // goToNew(posts){
-  //   this.router.navigate(['hot', posts]);
-  // }
+  goToPostDetail(post){
+    this.router.navigate(['post', post.id]);
+  }
 }

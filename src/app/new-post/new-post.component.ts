@@ -12,15 +12,17 @@ import { Post } from '../post.model';
 export class NewPostComponent implements OnInit {
   @Input() showNewForm;
   @Output() emitPostAdded = new EventEmitter();
+  posts: Post[];
 
   constructor(private router: Router, private postService: PostService) { }
 
   ngOnInit() {
+    this.posts = this.postService.getPosts();
   }
 
   createPost(title, pictureUrl, sourceUrl, category) {
     var currentDate = new Date();
-    var newPost = new Post(title, sourceUrl, currentDate.toLocaleDateString(), 0, pictureUrl, category );
+    var newPost = new Post(title, sourceUrl, currentDate.toLocaleDateString(), 0, pictureUrl, category, this.posts.length + 1);
     console.log(newPost)
     this.postService.addNewPost(newPost);
     this.emitPostAdded.emit();

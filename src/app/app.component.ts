@@ -24,4 +24,8 @@ export class AppComponent {
     this.showNewForm = false;
   }
 
+  goToPostList(category){
+    this.router.navigate(['post-list', category]);
+  }
+
 }

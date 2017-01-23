@@ -11,6 +11,9 @@ import { RisingComponent } from './rising/rising.component';
 import { ControversialComponent } from './controversial/controversial.component';
 import { SortPipe } from './sort.pipe';
 import { NewPostComponent } from './new-post/new-post.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
+import { PostListComponent } from './post-list/post-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { NewPostComponent } from './new-post/new-post.component';
     RisingComponent,
     ControversialComponent,
     SortPipe,
-    NewPostComponent
+    NewPostComponent,
+    PostDetailComponent,
+    EditPostComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
