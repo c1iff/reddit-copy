@@ -10,6 +10,7 @@ import { NewComponent } from './new/new.component';
 import { RisingComponent } from './rising/rising.component';
 import { ControversialComponent } from './controversial/controversial.component';
 import { SortPipe } from './sort.pipe';
+import { NewPostComponent } from './new-post/new-post.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SortPipe } from './sort.pipe';
     NewComponent,
     RisingComponent,
     ControversialComponent,
-    SortPipe
+    SortPipe,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,

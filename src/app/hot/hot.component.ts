@@ -8,6 +8,7 @@ import { Post } from '../post.model';
   templateUrl: './hot.component.html',
   styleUrls: ['./hot.component.css'],
   providers: [PostService]
+
 })
 export class HotComponent implements OnInit {
   posts: Post[];
@@ -17,7 +18,6 @@ export class HotComponent implements OnInit {
 
   ngOnInit() {
     this.posts = this.postService.getPosts();
-    console.log(this.posts)
   }
 
 }

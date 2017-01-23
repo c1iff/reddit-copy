@@ -15,4 +15,6 @@
   </h1>
 
   <router-outlet></router-outlet>
+  <button class="btn btn-success"(click)="showForm()">Add New Post</button>
+  <app-new-post [showNewForm]="showNewForm"></app-new-post>
 </div>

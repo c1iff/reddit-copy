@@ -1,0 +1,22 @@
+<div *ngIf="showNewForm">
+  <div class="form-group">
+    <label>Title</label><br>
+    <input #postTitle class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Picture URL</label><br>
+    <input #postPicUrl class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Source URL</label><br>
+    <input #postSourceUrl class="form-control">
+  </div>
+  <label>Category</label><br>
+  <select #postCategory class="form-control">
+     <option value="new" selected="selected">New</option>
+     <option value="hot">Hot</option>
+     <option value="controversial">Controversial</option>
+     <option value="rising">Rising</option>
+   </select><br>
+    <button class="btn btn-primary btn-inverse" (click)="createPost(postTitle.value, postPicUrl.value, postSourceUrl.value, postCategory.value )">Create Post</button>
+  </div>

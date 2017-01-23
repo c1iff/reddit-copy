@@ -11,4 +11,8 @@ export class PostService {
     return POSTS;
   }
 
+  addNewPost(post) {
+    POSTS.push(post);
+  }
+
 }

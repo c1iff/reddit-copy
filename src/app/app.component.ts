@@ -10,9 +10,14 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   posts: Post[];
+  showNewForm: boolean = false;
 
   constructor(private router: Router){}
 
   title = 'Discussion Board';
+
+  showForm() {
+    this.showNewForm = true;
+  }
 
 }
