@@ -23,7 +23,6 @@ export class NewPostComponent implements OnInit {
   createPost(title, pictureUrl, sourceUrl, category) {
     var currentDate = new Date();
     var newPost = new Post(title, sourceUrl, currentDate.toLocaleDateString(), 0, pictureUrl, category, this.posts.length + 1);
-    console.log(newPost)
     this.postService.addNewPost(newPost);
     this.emitPostAdded.emit();
   }

@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 })
 export class PostListComponent implements OnInit {
   posts: Post[];
-  filterCategory: string = "";
+  filterCategory: string = "new";
 
   constructor(private route: ActivatedRoute, private router: Router, private postService: PostService, private location: Location) { }
 
