@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../post.service';
+import { Router } from '@angular/router';
+import { Post } from '../post.model';
+
 
 @Component({
   selector: 'app-new',
   templateUrl: './new.component.html',
-  styleUrls: ['./new.component.css']
+  styleUrls: ['./new.component.css'],
+  providers: [PostService]
 })
 export class NewComponent implements OnInit {
-
-  constructor() { }
+  posts: Post[];
+  
+  constructor(private router: Router, private postService: PostService) { }
 
   ngOnInit() {
+    this.posts = this.postService.getPosts();
   }
 
+  // goToNew(posts){
+  //   this.router.navigate(['hot', posts]);
+  // }
 }
