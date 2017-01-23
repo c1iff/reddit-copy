@@ -38,4 +38,8 @@ export class PostListComponent implements OnInit {
   editFinished(){
     this.postToEdit = null;
   }
+
+  deletePost(post) {
+    this.postService.deletePost(post.id);
+  }
 }
